@@ -7,9 +7,9 @@ The `python` scripts solve a system of differential equations that describe the 
  - The body force $\rho g_x x$, where $\rho$ is the density of the droplet and $g_x$ is the lateral projection of the gravitational acceleration. 
 
 The system of differential equations is, in dimensionless units,
-$$ \frac{\mathrm{d}\phi}{\mathrm{d}s} = k0 + k1 x, $$
-$$ \frac{\mathrm{d}x}{\mathrm{d}s} = \cos \phi, $$
-$$ \frac{\mathrm{d}y}{\mathrm{d}s} = \sin \phi. $$
+$ \frac{\mathrm{d}\phi}{\mathrm{d}s} = k0 + k1 x, $
+$ \frac{\mathrm{d}x}{\mathrm{d}s} = \cos \phi, $
+$ \frac{\mathrm{d}y}{\mathrm{d}s} = \sin \phi. $
 The system is solved using the `solve_bvp` from the `scipy.integrate` package. As the variable $s$ ranges from 0 to $S$, and $S$ is uknown, a change of variables is necessary, thus using $\zeta = s/S$ and now $\zeta \in [0, 1]$ keeping $S$ as one of the parameters to be found by `solve_bvp`.
 
 ## Getting started
